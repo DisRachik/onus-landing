@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
-import Image from '@/assets/laptop.png';
-import ImageWebp from '@/assets/laptop.png?w=400&h=300&format=webp';
-import Image2 from '@/assets/laptop@2x.png';
-import ImageWebp2 from '@/assets/laptop@2x.png?w=800&h=600&format=webp';
+import Image from '@/assets/images/laptop.png';
+import ImageWebp from '@/assets/images/laptop.png?w=400&h=300&format=webp';
+import Image2 from '@/assets/images/laptop@2x.png';
+import ImageWebp2 from '@/assets/images/laptop@2x.png?w=800&h=600&format=webp';
 
-import Icon from '@/assets/react.svg?react';
+import FacebookIcon from '@/assets/icons/facebook.svg?react';
+import Icon from '@/assets/icons/logo.svg?react';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -16,7 +17,7 @@ function App() {
         <h1 className='page-title flex justify-center bg-primary-500'>Vite + React</h1>
         <div>
           <button onClick={() => setCount(count => count + 1)}>count is {count}</button>
-          <p>
+          <p className='text-primary-500'>
             Edit <code>src/App.tsx</code> and save to test HMR
           </p>
         </div>
@@ -27,7 +28,8 @@ function App() {
           <source srcSet={`${Image} 1x, ${Image2} 2x`} type='image/png' />
           <img src={Image} alt='Laptop' width={400} height={300} loading='lazy' />
         </picture>
-        <Icon width={100} height={100} />
+        <Icon width={108} height={49} />
+        <FacebookIcon width={24} height={24} className='fill-primary-500' />
       </div>
     </section>
   );
